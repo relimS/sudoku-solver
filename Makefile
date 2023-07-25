@@ -1,7 +1,7 @@
 CC := $(shell command -v clang >/dev/null 2>&1 && echo clang || (command -v gcc >/dev/null 2>&1 && echo gcc))
 CFLAGS ?= -Wall -Wextra -O3
 
-all: compile
+all: clean compile
 
 compile:
 ifeq ($(CC),)
@@ -10,3 +10,6 @@ ifeq ($(CC),)
 else
 	$(CC) $(CFLAGS) sudoku-solver.c -o solver
 endif
+
+clean:
+	$(RM) solver*
