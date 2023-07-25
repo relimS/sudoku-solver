@@ -67,7 +67,7 @@ int main(/*int argc, char *argv[]*/) {
     puts("Input:");
     // scanf("%81s", board);
     for (i = 0; i != 81; ++i) {
-        board[i] -= 48;
+        // board[i] -= 48;
         scanf("%hhu", board+i);
         if (board[i] > 10) {
             for (++i; i != 81; ++i) {
